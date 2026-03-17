@@ -28,12 +28,30 @@ const {
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
         <a href="/docs">Docs</a>
+        <a class="nav-cta" href="/about#contact">Contact</a>
         <a href="https://github.com/mxpc" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
     </header>
     <main>
       <slot />
     </main>
-    <footer class="site-footer">Copyright © {new Date().getFullYear()} MX PLUS C Ltd.</footer>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <strong>MX+C</strong>
+          <p>Linear name, exponential impact.</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p><a href="mailto:contact@mxpc.io">contact@mxpc.io</a></p>
+          <p>MX+C Ltd c/o WG LS17 9FD</p>
+        </div>
+        <div>
+          <strong>Navigate</strong>
+          <p><a href="/docs">Docs</a> · <a href="/blog">Blog</a> · <a href="/about">About</a></p>
+        </div>
+      </div>
+      <p class="footer-meta">Copyright © {new Date().getFullYear()} MX PLUS C Ltd.</p>
+    </footer>
   </body>
 </html>

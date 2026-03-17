@@ -2,34 +2,139 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-  <section class="hero">
+<BaseLayout title="MX+C | Applied AI Product Engineering" description="We help ambitious teams design, ship, and scale practical AI products with clear delivery and measurable outcomes.">
+  <section class="hero reveal">
+    <p class="eyebrow">Applied AI Product Engineering</p>
     <h1>
-      Your next idea,<br />
-      <span class="serif">shipped with confidence.</span>
+      Serious software, <br />
+      <span class="serif">not AI theatre.</span>
     </h1>
     <p>
-      MX+C builds practical AI systems for teams with high standards and limited time.
-      You bring the problem. We deliver software that works.
+      MX+C partners with founders and product teams who need working AI systems, not slide decks.
+      We scope aggressively, build quickly, and stay accountable to outcomes.
     </p>
     <div class="cta-row">
-      <a class="button primary" href="/about#contact">Start a conversation</a>
-      <a class="button secondary" href="/docs">Read the docs</a>
+      <a class="button primary" href="/about#contact">Book an intro call</a>
+      <a class="button secondary" href="/docs">How we work</a>
+    </div>
+    <ul class="hero-stats">
+      <li>
+        <strong>Prototype first</strong>
+        <span>Early validation before heavy build-out</span>
+      </li>
+      <li>
+        <strong>Weekly checkpoints</strong>
+        <span>Transparent updates and explicit tradeoffs</span>
+      </li>
+      <li>
+        <strong>Production mindset</strong>
+        <span>Maintainable systems from day one</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="logo-strip reveal delay-1" aria-label="Who we support">
+    <p>Built for ambitious product teams in fintech, climate, insurance, and spatial data.</p>
+  </section>
+
+  <section class="section reveal delay-2">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>What we deliver</h2>
+      <p>We focus on small, high-impact engagements that remove technical uncertainty quickly.</p>
+    </div>
+    <div class="grid service-grid">
+      <article class="card">
+        <h3>AI Product Prototyping</h3>
+        <p>Define the thinnest useful product and ship it fast enough to learn from real users.</p>
+        <ul class="mini-list">
+          <li>Problem framing and success criteria</li>
+          <li>Rapid UX and technical prototyping</li>
+          <li>Go/no-go recommendation</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Model + Data Pipelines</h3>
+        <p>Turn messy data and notebooks into repeatable, testable workflows.</p>
+        <ul class="mini-list">
+          <li>Data ingestion and quality checks</li>
+          <li>Model training and evaluation loops</li>
+          <li>Monitoring-ready outputs</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Production AI Features</h3>
+        <p>Integrate inference and automation into your product with reliability and clear ownership.</p>
+        <ul class="mini-list">
+          <li>API and service integration</li>
+          <li>Guardrails and fallback behavior</li>
+          <li>Rollout and instrumentation</li>
+        </ul>
+      </article>
     </div>
   </section>
 
-  <section class="grid">
-    <article class="card">
-      <h2>Applied AI Engineering</h2>
-      <p>We convert ambiguous ideas into production-quality AI products.</p>
-    </article>
-    <article class="card">
-      <h2>Lean Delivery</h2>
-      <p>Small team, rapid iterations, and transparent weekly outcomes.</p>
-    </article>
-    <article class="card">
-      <h2>Research to Reality</h2>
-      <p>Academic depth with pragmatic implementation decisions.</p>
-    </article>
+  <section class="section reveal delay-3">
+    <div class="section-head">
+      <p class="eyebrow">Delivery Model</p>
+      <h2>How an engagement runs</h2>
+    </div>
+    <div class="timeline">
+      <article class="timeline-step">
+        <span>01</span>
+        <h3>Scope</h3>
+        <p>We align on the outcome, constraints, and what “good” looks like.</p>
+      </article>
+      <article class="timeline-step">
+        <span>02</span>
+        <h3>Build</h3>
+        <p>We deliver in short cycles with visible progress and decision logs.</p>
+      </article>
+      <article class="timeline-step">
+        <span>03</span>
+        <h3>Prove</h3>
+        <p>We test against real data and user behavior, not happy-path demos.</p>
+      </article>
+      <article class="timeline-step">
+        <span>04</span>
+        <h3>Handover</h3>
+        <p>You get a maintainable system plus clear next steps for scale.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal delay-4">
+    <div class="section-head">
+      <p class="eyebrow">Example Work</p>
+      <h2>Typical project outcomes</h2>
+    </div>
+    <div class="grid">
+      <article class="card case-card">
+        <h3>Geo-imagery annotation assistant</h3>
+        <p>
+          Designed a workflow for prioritizing aerial imagery review and reducing manual annotation overhead.
+        </p>
+      </article>
+      <article class="card case-card">
+        <h3>Decision-support prediction service</h3>
+        <p>
+          Built a reliable API-backed prediction feature with explicit uncertainty and clear operational controls.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta-panel reveal delay-5">
+    <div>
+      <p class="eyebrow">Start here</p>
+      <h2>Have a real problem to solve?</h2>
+      <p>
+        Send a short brief. If we can help, we will suggest a practical first sprint.
+      </p>
+    </div>
+    <div class="cta-row">
+      <a class="button primary" href="mailto:contact@mxpc.io">Email contact@mxpc.io</a>
+      <a class="button secondary" href="/about#contact">See contact details</a>
+    </div>
   </section>
 </BaseLayout>
