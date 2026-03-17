@@ -1,33 +1,37 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This site uses [Astro](https://astro.build/) with [Starlight](https://starlight.astro.build/) for docs.
 
-### Installation
+## Installation
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
+```bash
+yarn install --frozen-lockfile
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Local Development
 
-### Build
-
-```
-$ yarn build
+```bash
+yarn dev
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Typecheck
 
-### Deployment
+```bash
+yarn typecheck
+```
 
-Deployment is handled by GitHub Actions:
+## Build
 
-1. Open a pull request to `main` and ensure CI passes (`typecheck` + `build`).
+```bash
+yarn build
+```
+
+The production output is generated in `dist/`.
+
+## Deployment
+
+Deployment is handled by GitHub Actions.
+
+1. Open a pull request to `main` and ensure CI checks pass.
 2. Merge to `main` to trigger deployment to GitHub Pages.
-3. Optionally run deployment manually from the Actions tab using `workflow_dispatch`.
+3. Optionally run deployment manually from the Actions tab with `workflow_dispatch`.
