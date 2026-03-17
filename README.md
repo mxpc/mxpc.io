@@ -26,16 +26,8 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Using SSH:
+Deployment is handled by GitHub Actions:
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. Open a pull request to `main` and ensure CI passes (`typecheck` + `build`).
+2. Merge to `main` to trigger deployment to GitHub Pages.
+3. Optionally run deployment manually from the Actions tab using `workflow_dispatch`.
