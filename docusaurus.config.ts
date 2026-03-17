@@ -13,11 +13,7 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'mxpc', // Usually your GitHub org/user name.
-  projectName: 'mxpc.github.io', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
+  // GitHub Pages is deployed via GitHub Actions workflow, not `docusaurus deploy`.
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
