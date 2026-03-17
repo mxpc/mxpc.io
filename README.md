@@ -1,6 +1,8 @@
 # Website
 
-This site uses [Astro](https://astro.build/) with [Starlight](https://starlight.astro.build/) for docs.
+This site uses [Astro](https://astro.build/).
+
+Documentation content is kept in-repo but is not publicly published yet.
 
 ## Installation
 

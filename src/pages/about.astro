@@ -3,21 +3,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="About | MX+C" description="Who we are and how to contact MX+C.">
-  <article class="page" id="contact">
+  <article class="page">
     <h1>About MX+C</h1>
     <p>
-      We started MX+C to bridge academic-level AI thinking with real-world delivery.
-      People have great ideas; we turn them into software products teams can actually use.
+      MX+C exists to close the gap between ambitious AI ideas and dependable production software.
+      We combine deep technical reasoning with pragmatic delivery so teams can ship with confidence.
     </p>
+  </article>
 
-    <h2>How we work</h2>
+  <section class="section section-tight">
+    <div class="section-head">
+      <p class="eyebrow">Our approach</p>
+      <h2>Pragmatic by default</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>Outcome-led scoping</h3>
+        <p>We define measurable outcomes first, then choose the smallest technical path that can achieve them.</p>
+      </article>
+      <article class="card">
+        <h3>Visible tradeoffs</h3>
+        <p>We document risks and decisions as we go, so there are no hidden surprises late in delivery.</p>
+      </article>
+      <article class="card">
+        <h3>Maintainable handover</h3>
+        <p>You get clean, operable systems with enough context for your team to continue confidently.</p>
+      </article>
+    </div>
+  </section>
+
+  <article class="page" id="contact">
+    <h2 id="how-we-work">How we work</h2>
     <p>
-      We prioritize fast prototypes, clear technical tradeoffs, and measurable outcomes.
-      The goal is always practical impact, not slideware.
+      Engagements are usually short and focused. Typical shape: discovery + prototype + production-hardening.
+      We work in weekly cycles with direct communication and explicit checkpoints.
     </p>
 
     <h2>Contact</h2>
     <p><strong>Post:</strong> MX+C Ltd c/o WG LS17 9FD</p>
-    <p><strong>Email:</strong> contact@mxpc.io</p>
+    <p><strong>Email:</strong> <a href="mailto:contact@mxpc.io">contact@mxpc.io</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/mxpc" target="_blank" rel="noreferrer">github.com/mxpc</a></p>
   </article>
 </BaseLayout>

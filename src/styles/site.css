@@ -5,8 +5,11 @@
   --paper: #fbf8f1;
   --accent: #146356;
   --accent-2: #f05d23;
+  --accent-3: #2f4ec9;
   --line: #d8d2c4;
   --card: rgba(255, 255, 255, 0.78);
+  --radius-lg: 24px;
+  --radius-md: 18px;
 }
 
 * {
@@ -21,6 +24,7 @@ body {
     radial-gradient(circle at 88% 0%, #b9f3df 0%, transparent 35%),
     linear-gradient(180deg, #fffef9 0%, #f4f0e5 100%);
   font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.45;
 }
 
 .mesh {
@@ -45,6 +49,7 @@ body {
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
+  z-index: 3;
 }
 
 .brand {
@@ -67,11 +72,19 @@ nav a {
   padding: 0.45rem 0.7rem;
   border-radius: 999px;
   border: 1px solid transparent;
+  transition: border-color 140ms ease, background-color 140ms ease, transform 140ms ease;
 }
 
 nav a:hover {
   border-color: var(--line);
   background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-1px);
+}
+
+nav a.nav-cta {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
 }
 
 main {
@@ -85,12 +98,12 @@ main {
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border: 1px solid var(--line);
   background: var(--card);
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .hero h1 {
-  margin: 0;
+  margin: 0.2rem 0 0;
   font-size: clamp(2rem, 6vw, 4rem);
   line-height: 0.95;
   letter-spacing: -0.03em;
@@ -105,7 +118,7 @@ main {
 
 .hero p {
   margin-top: 1rem;
-  max-width: 52ch;
+  max-width: 54ch;
   font-size: 1.1rem;
 }
 
@@ -122,6 +135,12 @@ main {
   border-radius: 999px;
   padding: 0.65rem 1rem;
   font-weight: 600;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .button.primary {
@@ -132,6 +151,7 @@ main {
 .button.secondary {
   border: 1px solid var(--line);
   color: var(--ink);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .grid {
@@ -143,9 +163,16 @@ main {
 
 .card {
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   padding: 1rem;
   background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 170ms ease, box-shadow 170ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
 }
 
 .card h2,
@@ -153,19 +180,176 @@ main {
   margin-top: 0;
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent-3);
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent-3);
+}
+
+.hero-stats {
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.hero-stats li {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.hero-stats strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.hero-stats span {
+  font-size: 0.94rem;
+}
+
+.logo-strip {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.logo-strip p {
+  margin: 0;
+}
+
+.section {
+  margin-top: 1.8rem;
+}
+
+.section.section-tight {
+  margin-top: 1.2rem;
+}
+
+.section-head h2 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.5rem, 3.8vw, 2.3rem);
+  letter-spacing: -0.02em;
+}
+
+.section-head p {
+  margin: 0.7rem 0 0;
+  max-width: 64ch;
+}
+
+.service-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.mini-list {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.mini-list li + li {
+  margin-top: 0.35rem;
+}
+
+.timeline {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.timeline-step {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.timeline-step span {
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-3);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-step h3 {
+  margin: 0;
+}
+
+.timeline-step p {
+  margin: 0.6rem 0 0;
+}
+
+.case-card p {
+  margin-bottom: 0;
+}
+
+.cta-panel {
+  margin-top: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1rem, 2.3vw, 1.8rem);
+  background: linear-gradient(135deg, rgba(20, 99, 86, 0.11), rgba(47, 78, 201, 0.1) 68%, rgba(240, 93, 35, 0.1));
+}
+
 .site-footer {
   width: min(1080px, calc(100% - 2rem));
   margin: 0 auto 1.5rem;
-  padding-top: 1rem;
+  padding-top: 1.2rem;
   border-top: 1px solid var(--line);
   font-size: 0.95rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.footer-grid p {
+  margin: 0.35rem 0 0;
+}
+
+.footer-grid a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.footer-meta {
+  margin-top: 1rem;
+  color: rgba(25, 26, 23, 0.74);
 }
 
 .page {
   margin-top: 1.5rem;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
   background: var(--card);
 }
 
@@ -185,6 +369,41 @@ main {
   text-underline-offset: 0.2em;
 }
 
+.reveal {
+  animation: riseIn 560ms ease both;
+}
+
+.delay-1 {
+  animation-delay: 90ms;
+}
+
+.delay-2 {
+  animation-delay: 150ms;
+}
+
+.delay-3 {
+  animation-delay: 210ms;
+}
+
+.delay-4 {
+  animation-delay: 280ms;
+}
+
+.delay-5 {
+  animation-delay: 330ms;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 700px) {
   .site-header {
     align-items: flex-start;
@@ -193,5 +412,24 @@ main {
 
   nav {
     width: 100%;
+  }
+
+  nav a.nav-cta {
+    order: -1;
+  }
+
+  .hero h1 {
+    line-height: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .button,
+  .card,
+  nav a {
+    animation: none;
+    transition: none;
+    transform: none;
   }
 }
