@@ -40,7 +40,7 @@ jobs:
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./build
+          path: ./dist
 
   deploy:
     name: Deploy

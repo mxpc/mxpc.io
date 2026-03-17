@@ -1,0 +1,39 @@
+---
+import '../styles/site.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'MX+C | AI Software Developers with substance',
+  description = 'Linear name, exponential impact. We build practical AI systems that solve real business problems.',
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  </head>
+  <body>
+    <div class="mesh" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="/">MX+C</a>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/docs">Docs</a>
+        <a href="https://github.com/mxpc" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">Copyright © {new Date().getFullYear()} MX PLUS C Ltd.</footer>
+  </body>
+</html>
